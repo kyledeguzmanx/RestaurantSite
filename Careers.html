@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Careers</title>
+    <link rel="icon" type="image/x-icon" href="https://www.logolynx.com/images/logolynx/fa/fa3529f4821f9e7976622ce790c3d028.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a2c0b46596.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header>
+    <nav>        
+      <div class="nav-img">           
+        <a href="index.html"> <img id="nav-logo" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Flogo.png?v=1638405722816"></a>        
+      </div>        
+      <div class="nav-links">                      
+        <ul>                           
+          <li><a href="index.html" title="Home">Home</a> </li>                            
+          <li class="dropdown">                         
+            <a class="dropdown-toggle" href="MenuPage.html"  title="Menu" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>                          
+            <div class="dropdown-menu" style="background-color:black; color:#ffba07;">                            
+              <a class="dropdown-item" href="MenuPage.html#burger-section">Burgers</a>                             
+              <a class="dropdown-item" href="MenuPage.html#fries-section">Fries</a>                             
+              <a class="dropdown-item" href="MenuPage.html#drinks-section">Drinks</a>                        
+            </div>                       
+          </li>                            
+          <li><a href="ContactPage.html" style="color:#ffba07;" title="Contact Us">Contact Us</a></li>         
+          <li><a href="CheckoutPage.html" title="Check Out"><i class="fas fa-shopping-cart"></i></a> </li>
+        </ul>           
+      </div>
+  </nav>
+    <div class="menu-header">
+        <h1>Careers</h1>
+    </div>
+</header>
+<main>
+
+    <section class="shadow container p-5 my-5  bg-white rounded">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <img class="center-block" id="careers-banner"src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Frecruit-img.jpg?v=1638593857142">
+        </div>
+      </div>
+      <p class="career-content">Csun Burger Grill&COPY; is looking for high-energy, friendly people to join our team. For over 11 years, our team
+            members have been creating world-famous hamburgers and memories for our guests. Working in the restaurant
+            business is hard work, but we do have fun. More than half of our employees have been with us over 10 years
+            and we are very proud of our employee retention. If you are interested in growing both personally and
+            professionally and want to be part of the team, what are you waiting for?</p>    
+      <h2 class="contactUsHeader">Application</h2>      
+      <form id="myForm">             
+        <div class="form-group col-md-3">                     
+          <label for="Name" class="required">Full Name</label>                      
+          <input type="text" name="fullname" class="form-control" id="Name" required="required">        
+        </div>                
+        <div class="form-group">               
+          <label for="Gender" class="col-3 col-form-label required">Gender</label>                          
+          <div class="col-md-2">                          
+            <select class="form-select input-sm" aria-label="MaleFemale" id="Gender" name="Gender" required="required">            
+              <option selected></option>           
+              <option value="Male">Male</option>               
+              <option value="Female">Female</option>            
+              <option value="I prefer not to say">I prefer not to say</option>          
+            </select>                
+          </div>        
+        </div>        
+        <div class="form-group col-md-3">                     
+          <label for="Email" required="required" class="required">Email address</label>                     
+          <input type="email" name="email" class="form-control" id="Email" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group col-md-4">            
+          <label for="Address" class="required">Address</label>            
+          <input type="text" name="address" class="form-control" id="Address">
+        </div>   
+        
+          <div class="form-group col-md-2">                
+            <label for="City" class="required">City</label>                
+            <input type="text" name="city" class="form-control" id="City">            
+          </div>            
+          <div class="form-group col-md-2">                
+            <label for="State" class="required">State/Province</label>                
+            <input type="text" name="State" class="form-control" id="State">           
+          </div>           
+          <div class="form-group col-md-2">                
+            <label for="ZipCode" class="required">Postal/Zip Code</label>                
+            <input type="text" name="zip" class="form-control" id="ZipCode">            
+          </div>
+        <div class="form-group">            
+          <label for="PhoneNum" class="col-2 col-form-label required">Phone number</label>                      
+          <div class="col-2">              
+            <input class="form-control" name="PhoneNumber" type="tel"  id="PhoneNum" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="2134213456">            
+          </div>       
+        </div>         
+        <div class="form-group">            
+          <label for="DateOfBirth" class="col-2 col-form-label required">Date of Birth</label>           
+          <div class="col-2">              
+            <input class="form-control" name="DateOfBirth" type="date" id="DateOfBirth" required="required">            
+          </div>        
+        </div>
+        <div class="form-group">     
+          <label for="EmploymentSt" class="col-4 col-form-label required">Employment status</label>                
+          <div class="col-md-2">                          
+            <select class="form-select input-sm" aria-label="EmploymentSt" name="EmploymentSt" id="EmploymentSt" required="required">           
+              <option selected></option>            
+              <option value="Employed">Employed</option>               
+              <option value="Self-Employed">Self-Employed</option>            
+              <option value="Unemployed">Unemployed</option> 
+              <option value="Student">Student</option>          
+            </select>                
+            </div>        
+        </div>       
+        
+
+        <div class="form-group">            
+          <label for="startDateInput" class="col-2 col-form-label required">Start Date</label>           
+          <div class="col-2">              
+            <input class="form-control" name="startingDate" type="date" id="startDateInput" required="required">            
+          </div>        
+        </div>
+          <div class="form-group">     
+          <label for="Position" class="col-4 col-form-label required">Applying for</label>                
+          <div class="col-md-2">                          
+            <select class="form-select input-sm" aria-label="PositionApply" name="Position" id="Position" required="required">           
+              <option selected></option>            
+              <option value="Cashier">Cashier</option>               
+              <option value="Burger Maker">Burger Maker</option>            
+              <option value="Servers">Servers</option>          
+            </select>                
+            </div>        
+        </div>  
+        <div class="form-group col-md-3">            
+          <label for="Resume" class="required">Resume URL</label>            
+          <input type="text" name="Resume" class="form-control" id="Resume">
+        </div>     
+        <br>
+        <button type="submit" class="contactUs">Submit</button>
+    </form>
+      
+
+    </section>
+</main>
+
+<footer>
+    <div class="footer-row1">
+        <div class="footer-hours">
+            <p class="footer-header">Hours</p>
+            <p>18111 Nordhoff Street, Northridge, CA 91330</p>
+            <p id="footer-phone">(818) 677-1200</p>
+
+            <p><b>Monday:</b> 11:00 AM-11:00 PM<br>
+                <b>Tuesday:</b>   11:00 AM-11:00 PM<br>
+                <b>Wednesday:</b> 11:00 AM-11:00 PM<br>
+                <b>Thursday:</b>  11:00 AM-11:00 PM<br>
+                <b>Friday:</b>    11:00 AM-11:00 PM<br>
+                <b>Saturday:</b>  11:00 AM-11:00 PM<br>
+                <b>Sunday:</b>    11:00 AM-11:00 PM<br>
+            </p>
+        </div>
+        <div class="footer-socials">
+            <p class="footer-header">Connect With us</p>
+            <a href="https://www.facebook.com/calstatenorthridge/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/csunorthridge" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/user/CalStateNorthridge" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/csun_edu/?hl=en" class="fa fa-instagram"></a>
+            <a href="https://www.tiktok.com/@csun_usu?lang=en" class="fab fa-tiktok"></a>
+        </div>
+        <div class="footer-apps">
+            <p class="footer-header">Download CSUN Burger App</p>
+            <a href="https://apps.apple.com/us/app/csun/id677332861" alt="CSUN App (Apple App Store)"><img src="https://www.go2s.com/wp-content/uploads/2019/09/appstore.png" id="apple-btn"></a>
+            <a href="https://play.google.com/store/apps/details?id=edu.csun.mobile" alt="CSUN App (Google Play Store)"><img src="https://www.pngmart.com/files/10/Get-It-On-Google-Play-PNG-Clipart.png" id="android-btn" ></a>
+        </div>
+
+    </div>
+
+    <div class="footer-row2">
+        <p>&copy;2021 CSUN Burger Grill. All Rights Reserved</p>
+        <p><a href="#" class="footerLinks">Policies</a> | <a href="TermsOfService.html" class="footerLinks">Terms of Service</a> | <a href="Accessibility.html" class="footerLinks">Accessibility </a> |<a href="ContactPage.html" class="footerLinks"> Contact Us</a> |<a href="Careers.html" class="footerLinks"> Careers</a></p>                
+        <p>Site Design by TheTeam</p>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="careerForm.js" type="text/javascript"></script>
+</body>
+</html>
