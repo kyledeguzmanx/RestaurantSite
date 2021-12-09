@@ -22,3 +22,8 @@ Grid + Flexbox
 ![Screenshot](https://github.com/kyledeguzmanx/RestaurantSite/blob/master/images/contact3.png) 
 ![Screenshot](https://github.com/kyledeguzmanx/RestaurantSite/blob/master/images/access1.png) 
 ![Screenshot](https://github.com/kyledeguzmanx/RestaurantSite/blob/master/images/privacy.png) 
+
+## Credits
+Color Palette Provided by [Coolors](https://coolors.co/)  
+Google Maps Embed   
+Dropdown Menu by Boostrap Docs
