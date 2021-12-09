@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="https://www.logolynx.com/images/logolynx/fa/fa3529f4821f9e7976622ce790c3d028.jpeg">
     <title>Menu - Burger</title>
-    <link rel="stylesheet" href="kStyles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <script src="https://kit.fontawesome.com/a2c0b46596.js" crossorigin="anonymous"></script>
   </head>
   
   
-<body style="background-image: url('https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fimageedit_8_9785678881.png?v=1637817476383');"> 
+<body> 
   <header>
-    
     <!--NAVIGATION BAR-->
     <nav> 
       <div class="nav-img">
@@ -21,134 +21,144 @@
       </div>
       <div class="nav-links">
         <ul>     
-        <li><a href="index.html" title="Home">Home</a> </li>     
-        <li><a href="MenuPage.html" style="color:#ffba07;" title="Menu" >Menu</a></li>         
-        <li><a href="ContactPage.html" title="Contact Us">Contact Us</a></li>            
-        <li><a href="CheckoutPage.html" title="Check Out"><i class="fas fa-shopping-cart"></i></a> </li>        
+          <li><a href="index.html" title="Home">Home</a> </li>     
+           <li class="dropdown">
+            <a class="dropdown-toggle" href="MenuPage.html"  title="Menu" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+            <div class="dropdown-menu" style="background-color:black; color:#ffba07;">
+              <a class="dropdown-item" href="MenuPage.html#burger-section">Burgers</a>
+              <a class="dropdown-item" href="MenuPage.html#fries-section">Fries</a>
+              <a class="dropdown-item" href="MenuPage.html#drinks-section">Drinks</a>
+            </div>  
+          </li>         
+          <li><a href="ContactPage.html" title="Contact Us">Contact Us</a></li>     
+          <li><a href="CheckoutPage.html" title="Check Out"><i class="fas fa-shopping-cart"></i></a> </li>        
       </ul>     
       </div>
     </nav>
-    
-    
-    <h1 class="container-fluid p-5 bg-white text-center">Menu</h1>
+    <!--MENU TEXT -->
+    <div class="menu-header">
+      <h1>Our Menu</h1>
+    </div>
   </header> 
   <main>
     <section class="shadow container p-5 my-5 bg-white rounded">   
-      <div class="shadow bg-white border rounded">
-        <br>
-        <h2 class="text-center" style="font-family: 'Lobster', cursive;"><b>Burgers</b></h2>
-        <br>
+      <div class="shadow bg-white border rounded menu-subheader">
+        <h2 class="menu-item-heading" id="burger-section">Burgers</b></h2>
+        <p>100% FRESH GROUND BEEF CHARGRILLED OVER AN OPEN FLAME</p>
       </div>    
+      
       <div class="shadow bg-white border rounded">   
         <div class="row container justify-content-center">
 <!--  Burger #1  Card       -->   
           <div class="card p-3 my-5" style="width: 18rem;">     
             <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fb1.jpg?v=1637903577752" alt="Card image cap">
             <div class="card-body">  
-              <p class="card-title">The Classic American</p>  
+              <p class="card-title2">The Classic American</p>  
               <p class="card-text">A double cheese burger with lettuce, pickels, and tomatoes topped with our not-so secret sauce.</p>  
-              <p class="card-text">$14.99</p> 
-<!--  Burger #1  Button       -->   
-              <a href="#" class="btn btn-primary">Add to Cart</a>  
+              <p class="card-text">$14.99</p>
+              <!--  Burger #1  Button       -->   
+              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
             </div>
 <!--  Burger #2  Card       -->
           </div>         
           <div class="card p-3 my-5" style="width: 18rem;"> 
             <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fb2.jpg?v=1637903572872" alt="Card image cap"> 
             <div class="card-body">    
-              <p class="card-title">The House Burger</p>   
+              <p class="card-title2">The House Burger</p>   
               <p class="card-text">A cheese burger with lettuce, grilled onions, and crispy bacon. Served with a lightly toasted brioche bun.
               </p>  
-              <p class="card-text">$14.99</p> 
-<!--  Burger #2  Button       -->   
-              <a href="#" class="btn btn-primary">Add to Cart</a>  
+              <p class="card-text">$14.99</p>
+              <!--  Burger #2  Button       -->   
+              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
             </div>
           </div>
 <!--  Burger #3  Card       -->         
           <div class="card p-3 my-5" style="width: 18rem;">  
             <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fb3.jpg?v=1637903564896" alt="Card image cap"> 
             <div class="card-body">    
-              <p class="card-title">The Double Decker</p>   
+              <p class="card-title2">The Double Decker</p>   
               <p class="card-text">A double cheese burger with pickels, roasted tomatoes, and grilled onions topped with our not-so secret sauce.</p> 
               <p class="card-text">$14.99</p>
-<!--  Burger #3  Button       -->   
-              <a href="#" class="btn btn-primary">Add to Cart</a> 
+              <!--  Burger #3  Button       -->   
+              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
+
             </div>
           </div>
 <!--  Burger #4  Card       -->         
           <div class="card p-3 my-5" style="width: 18rem;">
             <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fb4.jpg?v=1637903559195" alt="Card image cap">  
             <div class="card-body">   
-              <p class="card-title">The Triple Decker</p>    
+              <p class="card-title2">The Triple Decker</p>    
               <p class="card-text">A 3x3 cheese burger with lettuce, tomatoes, pickels, and avocado crema. Served with a lightly toasted brioche bun.</p>
-              <p class="card-text">$17.99</p> 
-<!--  Burger #4  Button       -->   
-              <a href="#" class="btn btn-primary">Add to Cart</a>  
+              <p class="card-text">$17.99</p>
+              <!--  Burger #4  Button       -->   
+              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
+           
             </div>
           </div>     
         </div>      
       </div>   
     </section>   
     <section class="shadow container p-5 my-5 bg-white rounded">  
-      <div class="shadow bg-white border rounded">
-        <br>
-        <h2 class="text-center" style="font-family: 'Lobster', cursive;"><b>Fries</b></h2>
-        <br>    
+      <div class="shadow bg-white border rounded menu-subheader">
+        <h2 class="menu-item-heading" id="fries-section">Fries</b></h2> 
+        <p>FRESH, THICK-CUT, CRISPY, AND GOLDEN-BROWN POTATOES</p>
       </div>
       <div class="shadow bg-white border rounded">        
         <div class="row container justify-content-center">
-<!--  Fries Card       -->   
+<!--  Cajun Fries      -->   
           <div class="card p-3 my-5" style="width: 18rem;">         
             <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fa1.jpg?v=1637904432987" alt="Card image cap">  
             <div class="card-body">   
-              <p class="card-title">Cajun Fries</p>   
+              <p class="card-title2">Cajun Fries</p>   
               <p class="card-text">Crispy hand-cut French Fries seasoned with a special cajun blend.</p> 
               <p class="card-text">$5.49</p>
-<!--  Fries Button       -->   
-              <a href="#" class="btn btn-primary">Add to Cart</a> 
+              <!--  Cajun Fries Button       -->   
+
+              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
             </div>
-<!--  Onion Ring  Card       -->
+<!--  Garlic Fries  Card       -->
           </div>         
           <div class="card p-3 my-5" style="width: 18rem;">  
             <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fa3.jpg?v=1637904445409" alt="Card image cap">  
             <div class="card-body">   
-              <p class="card-title">Garlic Fries</p>    
+              <p class="card-title2">Garlic Fries</p>    
               <p class="card-text">Crispy hand-cut French fries tossed in garlic aioli and topped with cheese</p> 
-              <p class="card-text">$6.69</p> 
-<!--  Onion Ring  Button       -->   
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <p class="card-text">$6.69</p>
+              <!--  Garlic Fries  Button       -->   
+              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
             </div>
           </div>
-<!--  ???? #3  Card       -->           
+<!--  Sweet Potato Fries Card       -->           
           <div class="card p-3 my-5" style="width: 18rem;"> 
             <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fa2.jpg?v=1637904438041" alt="Card image cap"> 
             <div class="card-body">   
-              <p class="card-title">Sweet Potato Fries</p>   
+              <p class="card-title2">Sweet Potato Fries</p>   
               <p class="card-text">Crispy hand-cut Sweet Potato fries seasoned with salt, pepper, and garlic.</p>
-              <p class="card-text">$5.49</p> 
-<!--  ??? #3  Button       -->   
-              <a href="#" class="btn btn-primary">Add to Cart</a> 
+              <p class="card-text">$5.49</p>
+              <!--  Sweet Potato Fries Button       -->   
+              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
             </div>
           </div>
-<!--  ??? #4  Card       -->   
+<!--  House Tater Tots Card       -->   
           <div class="card p-3 my-5" style="width: 18rem;">
             <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fa4.jpg?v=1637904778497" alt="Card image cap">
             <div class="card-body">  
-              <p class="card-title">House Tater Tots</p>  
+              <p class="card-title2">House Tater Tots</p>  
               <p class="card-text">A basket of crispy old-fashioned tator tots seasoned with our secret House Blend.</p> 
-<!--  ??? #4  Button       -->   
-              <p class="card-text">$7.22</p> 
-              <a href="#" class="btn btn-primary">Add to Cart</a>  
+              <p class="card-text">$7.22</p>
+              <!--  House Tater Tots Button       -->  
+          
+              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
             </div>
           </div>
         </div>    
       </div>
     </section>
     <section class="shadow container p-5 my-5 bg-white rounded">    
-      <div class="shadow bg-white border rounded">
-        <br>
-        <h2 class="text-center" style="font-family: 'Lobster', cursive;"><b>Drinks</b></h2>
-        <br>      
+      <div class="shadow bg-white border rounded menu-subheader">
+        <h2 class="menu-item-heading" id="drinks-section">Drinks</h2> 
+        <p>HANDCRAFTED AND MADE-TO-ORDER</p>
       </div>
       <div class="shadow bg-white border rounded">  
         <div class="row container justify-content-center">
@@ -157,44 +167,47 @@
             
             <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fd1.jpg?v=1637905053914" alt="Card image cap">
             <div class="card-body"> 
-              <p class="card-title">HERSHEY's Chocolate Shake</p> 
+              <p class="card-title2">HERSHEY's Chocolate Shake</p> 
               <p class="card-text">A HERSHEYs chocolate shake topped with 2 cookies and a chocolate cake pop.</p> 
-              <p class="card-text">$7.99</p> 
+              <p class="card-text">$7.99</p>             
+              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
+
 <!--  Drink #1  Button       -->   
-              <a href="#" class="btn btn-primary">Add to Cart</a>
             </div>
 <!--  Drink #2  Card       -->
           </div>
           <div class="card p-3 my-5" style="width: 18rem;">
             <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fd4.jpg?v=1637905041676" alt="Card image cap">
             <div class="card-body">
-              <p class="card-title">Strawberry Shake</p>
+              <p class="card-title2">Strawberry Shake</p>
               <p class="card-text">A sweet strawberry shake blended with a dash of white chocolate. Toppe with whipped cream.</p>
-              <p class="card-text">$7.99</p> 
+              <p class="card-text">$7.99</p>
+              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
+
 <!--  Drink #2  Button       -->   
-              <a href="#" class="btn btn-primary">Add to Cart</a>
             </div>
           </div>
 <!--  Drink #3  Card       -->         
           <div class="card p-3 my-5" style="width: 18rem;">
             <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fd3.jpg?v=1637905045550" alt="Card image cap">
             <div class="card-body">  
-              <p class="card-title">Iced Mocha</p>  
+              <p class="card-title2">Iced Mocha</p>  
               <p class="card-text">An Iced Mocha made with Stumptown Cold Brew Original Coffee, chocolate syrup, and milk.</p>
               <p class="card-text">$4.99</p>
+              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
+
 <!--  Drink #3  Button       -->   
-              <a href="#" class="btn btn-primary">Add to Cart</a>  
             </div>
           </div>
 <!--  Drink #4  Card       -->    
           <div class="card p-3 my-5" style="width: 18rem;">
             <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fd2.jpg?v=1637905049584?\" alt="Card image cap"> 
             <div class="card-body">    
-              <p class="card-title">Vanilla Shake</p>   
+              <p class="card-title2">Vanilla Shake</p>   
               <p class="card-text">A classic Pure Vanilla shake made with Bassetts Ice Cream and milk. Topped with whipped cream and sprinkles.</p> 
               <p class="card-text">$7.99</p> 
+              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
 <!--  Drink #4  Button       -->   
-              <a href="#" class="btn btn-primary">Add to Cart</a>
             </div>
           </div>     
         </div>      
@@ -235,7 +248,8 @@
     </div>
     
     <div class="footer-row2">
-      <p>&copy;2021 CSUN Burger Grill. All Rights Reserved</p>
+      <p>&copy;2021 CSUN Burger Grill. All Rights Reserved</p>       
+      <p><a href="#" class="footerLinks">Policies</a> | <a href="TermsOfService.html" class="footerLinks">Terms of Service</a> | <a href="Accessibility.html" class="footerLinks">Accessibility </a> |<a href="ContactPage.html" class="footerLinks"> Contact Us</a> |<a href="Careers.html" class="footerLinks"> Careers</a></p>                
       <p>Site Design by TheTeam</p>
     </div>
   </footer>

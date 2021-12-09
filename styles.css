@@ -1,0 +1,298 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Orbitron:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+:root{
+  --customRed: #af231c; 
+  --customYellow: #ffba07;
+}
+/*------------------------------SHARED CSS----------------------------------*/
+body{
+  background: url('https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fimageedit_8_9785678881.png?v=1637817476383')
+}
+/*NAVIGATION BAR*/
+nav{
+  /*background-color: #9d0208;*/
+  background-color: var(--customRed);
+  
+}
+nav, .nav-img{
+  height: 13vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-logo{
+  height: 13vh;
+  width: auto;
+  margin-left: 2rem;
+}
+
+.nav-links ul{
+  list-style: none;
+  padding-right: 3rem;
+}
+.nav-links ul li{
+  display: inline;
+  padding-left: 3rem;
+}
+.nav-links ul li a{
+  text-decoration: none; 
+  font-size: 1.15rem;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+}
+.nav-links ul li a:hover{
+  color:var(--customYellow);
+   transition: color 250ms linear;
+}
+
+/*END NAV*/
+
+
+
+/*FOOTER*/
+
+footer{
+  background: url(https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Ffooter.png?v=1638411983784);
+  
+  background-size: cover;
+  background-position: right 30px top 100px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: white;
+}
+.footer-row1{
+  margin-left: 10%;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-row2{
+  padding-top: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 0.7rem;
+}
+.footer-header{
+  color: #ffba07;
+  font-size: 1.4rem;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+}
+.fa, .fab {
+  padding: 10px;
+  font-size: 20px;
+  width: 39px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  color: var(--customRed);
+  background-color: white;
+  
+}
+
+.fa:hover, .fab:hover{
+  background-color:black;
+  color: var(--customRed);
+  transition: background-color 250ms linear;
+}
+
+#apple-btn{
+  height: 40px;
+  width: auto;
+}
+#android-btn{
+  height: 33px;
+  width: auto;
+}
+#footer-phone{
+  color:var(--customYellow);
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+}
+.footer-row2 p a{
+  text-decoration:none;
+  color: white;
+}
+/*END FOOTER*/
+/*------------------------------INDEX PAGE----------------------------------*/
+
+/*HOME BANNER*/
+.home-banner{
+  background: url(https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fhome-banner.jpg?v=1638420813221);
+  height: 87vh;
+  background-size:cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.home-banner-filter{
+  background-color:rgba(0,0,0,0.5);
+  height: 87vh;
+  display:grid;
+  place-items: center;
+}
+.home-banner-content p{
+  text-transform: uppercase;
+  color:white;
+   color:var(--customYellow);
+  font-size:30px;
+  font-family: 'Alfa Slab One', cursive;
+  text-align:center;
+  padding: 5vw;
+/*END BANNER*/
+
+}
+.banner-big{
+  font-size: 70px;
+}
+
+.home-content{
+  margin:20px 10% ;
+  line-height: 2.7;
+}
+.home-content h3{
+  font-family: 'Staatliches', cursive;
+  color: var(--customRed);
+  font-size:3rem;
+}
+.home-content-welcome{
+  text-align:center;
+  font-family: 'Staatliches', cursive;
+  font-size: 3.5rem;
+}
+
+/*HOME BANNER*/
+.home-banner2{
+  background: url(https://images.unsplash.com/photo-1554306297-0c86e837d24b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80);
+  height: 87vh;
+  background-size:cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/*HOME BANNER*/
+.home-banner3{
+  background: url(https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+  height: 87vh;
+  background-size:cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/*END BANNER*/
+
+
+.home-courier{
+  background: url(https://images.unsplash.com/photo-1597075561373-cf8898ec7290?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-position: center center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  min-height: 35vh;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+.align-items-center{
+  background-color:rgba(0,0,0,0.5);
+  min-height: 35vh;
+}
+.align-items-center div a img{
+  height: 20vh;
+  width: auto;
+}
+
+.align-items-center div a img:hover { 
+  transform: scale(1.15); 
+}
+/*------------------------------MENU CSS----------------------------------*/
+/*MENU */
+.menu-header{
+  text-align: center;
+  width: 100%;
+  background-color: var(--customYellow);
+  color: var(--customRed);
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+  font-family: 'Alfa Slab One', cursive;
+}
+.menu-header h1{
+   font-size: 50px;
+}
+.menu-subheader{
+  text-align: center;
+  background-color: var(--customYellow);
+  padding: 3vh 0;
+  
+}
+.menu-item-heading{
+  font-family: 'Staatliches', cursive;
+  color: var(--customRed);
+  font-weight:bold;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.menu-item-subheading{
+  font-family: 'Staatliches', cursive;
+  color: var(--customRed);
+  font-weight:bold;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.MenuAddbutton,.contactUs{
+  background-color: var(--customRed);
+  border: none;
+  color: white;
+  padding: 5px 100px;
+ border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  alignment: right;
+  
+}
+.MenuAddbutton:hover, .contactUs:hover{
+  background-color:yellow;
+  color: var(--customRed);
+  transition: background-color 250ms linear;
+}
+.contactUsHeader{
+  font-family: 'Staatliches', cursive;
+  color: var(--customRed);
+  font-size:2rem;
+}
+.card-title2{
+  font-family: 'Staatliches', cursive;
+  color: var(--customRed);
+  font-size: 1.4rem;
+}
+/*TERMS OF SERVICE*/
+
+.tos-container{
+  margin: 5% 12%;
+}
+/*Careers*/
+
+#careers-banner{
+  width: 80%;
+  height:auto;
+}
+.required:after {
+    content:" *";
+    color: red;
+  }
+
+.footerLinks:hover{
+  color:var(--customYellow);
+   transition: color 250ms linear;
+}
+.career-content{
+  padding-top: 10px;
+  line-height: 2.7;
+}
