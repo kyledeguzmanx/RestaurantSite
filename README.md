@@ -1,6 +1,13 @@
 # CSUN BURGER
 A mock-site for a burger place.
 
+## Technology  
+Bootstrap  
+CSS  
+Javascript  
+HTML  
+Grid + Flexbox  
+
 ## Screenshots  
 ![Screenshot](https://github.com/kyledeguzmanx/RestaurantSite/blob/master/images/home1.png)  
 ![Screenshot](https://github.com/kyledeguzmanx/RestaurantSite/blob/master/images/home2.png)  
