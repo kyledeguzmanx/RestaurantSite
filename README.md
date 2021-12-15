@@ -1,5 +1,5 @@
 # CSUN BURGER
-A mock-site for a burger place.
+A mock-site for a burger chain called CSUN Grill. It includes an image carousel, navigation bar, navigation bar w/ dropdown, and CSS transitions
 
 ## Technology  
 Bootstrap  
