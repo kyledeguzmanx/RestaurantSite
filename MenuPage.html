@@ -9,6 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <script src="https://kit.fontawesome.com/a2c0b46596.js" crossorigin="anonymous"></script>
+    <!-- Import Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <!-- Import Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
   </head>
   
   
@@ -21,7 +25,7 @@
       </div>
       <div class="nav-links">
         <ul>     
-          <li><a href="index.html" title="Home">Home</a> </li>     
+          <li><a href="index.html" title="Home">Home</a></li>     
            <li class="dropdown">
             <a class="dropdown-toggle" href="MenuPage.html"  title="Menu" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
             <div class="dropdown-menu" style="background-color:black; color:#ffba07;">
@@ -30,6 +34,7 @@
               <a class="dropdown-item" href="MenuPage.html#drinks-section">Drinks</a>
             </div>  
           </li>         
+          <li><a href="Gallery.html" title="Gallery">Gallery</a></li>
           <li><a href="ContactPage.html" title="Contact Us">Contact Us</a></li>     
           <li><a href="CheckoutPage.html" title="Check Out"><i class="fas fa-shopping-cart"></i></a> </li>        
       </ul>     
@@ -39,181 +44,400 @@
     <div class="menu-header">
       <h1>Our Menu</h1>
     </div>
-  </header> 
-  <main>
-    <section class="shadow container p-5 my-5 bg-white rounded">   
-      <div class="shadow bg-white border rounded menu-subheader">
-        <h2 class="menu-item-heading" id="burger-section">Burgers</b></h2>
-        <p>100% FRESH GROUND BEEF CHARGRILLED OVER AN OPEN FLAME</p>
-      </div>    
-      
-      <div class="shadow bg-white border rounded">   
-        <div class="row container justify-content-center">
-<!--  Burger #1  Card       -->   
-          <div class="card p-3 my-5" style="width: 18rem;">     
-            <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fb1.jpg?v=1637903577752" alt="Card image cap">
-            <div class="card-body">  
-              <p class="card-title2">The Classic American</p>  
-              <p class="card-text">A double cheese burger with lettuce, pickels, and tomatoes topped with our not-so secret sauce.</p>  
-              <p class="card-text">$14.99</p>
-              <!--  Burger #1  Button       -->   
-              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
-            </div>
-<!--  Burger #2  Card       -->
-          </div>         
-          <div class="card p-3 my-5" style="width: 18rem;"> 
-            <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fb2.jpg?v=1637903572872" alt="Card image cap"> 
-            <div class="card-body">    
-              <p class="card-title2">The House Burger</p>   
-              <p class="card-text">A cheese burger with lettuce, grilled onions, and crispy bacon. Served with a lightly toasted brioche bun.
-              </p>  
-              <p class="card-text">$14.99</p>
-              <!--  Burger #2  Button       -->   
-              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
-            </div>
-          </div>
-<!--  Burger #3  Card       -->         
-          <div class="card p-3 my-5" style="width: 18rem;">  
-            <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fb3.jpg?v=1637903564896" alt="Card image cap"> 
-            <div class="card-body">    
-              <p class="card-title2">The Double Decker</p>   
-              <p class="card-text">A double cheese burger with pickels, roasted tomatoes, and grilled onions topped with our not-so secret sauce.</p> 
-              <p class="card-text">$14.99</p>
-              <!--  Burger #3  Button       -->   
-              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
-
-            </div>
-          </div>
-<!--  Burger #4  Card       -->         
-          <div class="card p-3 my-5" style="width: 18rem;">
-            <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fb4.jpg?v=1637903559195" alt="Card image cap">  
-            <div class="card-body">   
-              <p class="card-title2">The Triple Decker</p>    
-              <p class="card-text">A 3x3 cheese burger with lettuce, tomatoes, pickels, and avocado crema. Served with a lightly toasted brioche bun.</p>
-              <p class="card-text">$17.99</p>
-              <!--  Burger #4  Button       -->   
-              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
-           
-            </div>
-          </div>     
-        </div>      
-      </div>   
-    </section>   
-    <section class="shadow container p-5 my-5 bg-white rounded">  
-      <div class="shadow bg-white border rounded menu-subheader">
-        <h2 class="menu-item-heading" id="fries-section">Fries</b></h2> 
-        <p>FRESH, THICK-CUT, CRISPY, AND GOLDEN-BROWN POTATOES</p>
-      </div>
-      <div class="shadow bg-white border rounded">        
-        <div class="row container justify-content-center">
-<!--  Cajun Fries      -->   
-          <div class="card p-3 my-5" style="width: 18rem;">         
-            <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fa1.jpg?v=1637904432987" alt="Card image cap">  
-            <div class="card-body">   
-              <p class="card-title2">Cajun Fries</p>   
-              <p class="card-text">Crispy hand-cut French Fries seasoned with a special cajun blend.</p> 
-              <p class="card-text">$5.49</p>
-              <!--  Cajun Fries Button       -->   
-
-              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
-            </div>
-<!--  Garlic Fries  Card       -->
-          </div>         
-          <div class="card p-3 my-5" style="width: 18rem;">  
-            <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fa3.jpg?v=1637904445409" alt="Card image cap">  
-            <div class="card-body">   
-              <p class="card-title2">Garlic Fries</p>    
-              <p class="card-text">Crispy hand-cut French fries tossed in garlic aioli and topped with cheese</p> 
-              <p class="card-text">$6.69</p>
-              <!--  Garlic Fries  Button       -->   
-              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
-            </div>
-          </div>
-<!--  Sweet Potato Fries Card       -->           
-          <div class="card p-3 my-5" style="width: 18rem;"> 
-            <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fa2.jpg?v=1637904438041" alt="Card image cap"> 
-            <div class="card-body">   
-              <p class="card-title2">Sweet Potato Fries</p>   
-              <p class="card-text">Crispy hand-cut Sweet Potato fries seasoned with salt, pepper, and garlic.</p>
-              <p class="card-text">$5.49</p>
-              <!--  Sweet Potato Fries Button       -->   
-              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
-            </div>
-          </div>
-<!--  House Tater Tots Card       -->   
-          <div class="card p-3 my-5" style="width: 18rem;">
-            <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fa4.jpg?v=1637904778497" alt="Card image cap">
-            <div class="card-body">  
-              <p class="card-title2">House Tater Tots</p>  
-              <p class="card-text">A basket of crispy old-fashioned tator tots seasoned with our secret House Blend.</p> 
-              <p class="card-text">$7.22</p>
-              <!--  House Tater Tots Button       -->  
-          
-              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
-            </div>
-          </div>
+  </header>
+  
+  <div id="app"> <!-- Start of Vue/App -->
+  
+    <main>
+      <section class="shadow container p-5 my-5 bg-white rounded">   
+        <div class="shadow bg-white border rounded menu-subheader">
+          <h2 class="menu-item-heading" id="burger-section">Burgers</b></h2>
+          <p>100% FRESH GROUND BEEF CHARGRILLED OVER AN OPEN FLAME</p>
         </div>    
-      </div>
-    </section>
-    <section class="shadow container p-5 my-5 bg-white rounded">    
-      <div class="shadow bg-white border rounded menu-subheader">
-        <h2 class="menu-item-heading" id="drinks-section">Drinks</h2> 
-        <p>HANDCRAFTED AND MADE-TO-ORDER</p>
-      </div>
-      <div class="shadow bg-white border rounded">  
-        <div class="row container justify-content-center">
-<!--  Drink #1  Card       -->    
-          <div class="card p-3 my-5" style="width: 18rem;">      
-            
-            <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fd1.jpg?v=1637905053914" alt="Card image cap">
-            <div class="card-body"> 
-              <p class="card-title2">HERSHEY's Chocolate Shake</p> 
-              <p class="card-text">A HERSHEYs chocolate shake topped with 2 cookies and a chocolate cake pop.</p> 
-              <p class="card-text">$7.99</p>             
-              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
 
-<!--  Drink #1  Button       -->   
-            </div>
-<!--  Drink #2  Card       -->
-          </div>
-          <div class="card p-3 my-5" style="width: 18rem;">
-            <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fd4.jpg?v=1637905041676" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-title2">Strawberry Shake</p>
-              <p class="card-text">A sweet strawberry shake blended with a dash of white chocolate. Toppe with whipped cream.</p>
-              <p class="card-text">$7.99</p>
-              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
+        <div class="shadow bg-white border rounded">   
+          <div class="row container justify-content-center">
+            <!-- Burgers loop -->
+            <div v-for="(burger, index) in burgers" :key="index" class="col-sm g-0">
+              <div class="card p-3 my-5" style="width: 18rem;"> 
+                <img class="card-img-top" v-bind:src="burger.image" alt="Card image cap"> 
+                <div class="card-body">    
+                  <p class="card-title2">{{ burger.name }}</p>   
+                  <p class="card-text">{{ burger.description }}</p>  
+                  <p class="card-text">{{ burger.price }}</p>   
+                  <!-- Add to cart button -->
+                  <button class="MenuAddbutton" data-bs-toggle="modal" data-bs-target="#burgerModal" v-on:click="setModalBurger(burger)"><i class="fas fa-cart-plus"></i></button>
+                </div> <!-- End of card body -->
+                
+                <!-- Start of Modal content -->
+                
+                <div class="modal fade" id="burgerModal" tabindex="-1" aria-labelledby="burgerModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="burgerModalLabel">{{ modalBurger.name }}</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" v-on:click="resetItem(burger, modalBurger)"></button>
+                      </div>
+                      <div class="modal-body">
+                        <!-- Start of Modal body content -->
+                          
+                        <!-- 
+                          - Unique properties/options for an item in a v-for loop seem to require a workaround as the modal doesn't seem to loop the same as the cards 
+                          - Modal for all burgers were showing the unique option that was only supposed to show on the modal for burger 1
+                          - Workaround was creating the "setModalBurger (burger)" function which gets called when they hit button on card to open modal 
+                            - This function simply passes the current food option in the loop to the function and sets an empty object equal to the passed burger object
+                            - This basically allows the modals to loop similar to the cards
+                          -->
 
-<!--  Drink #2  Button       -->   
-            </div>
-          </div>
-<!--  Drink #3  Card       -->         
-          <div class="card p-3 my-5" style="width: 18rem;">
-            <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fd3.jpg?v=1637905045550" alt="Card image cap">
-            <div class="card-body">  
-              <p class="card-title2">Iced Mocha</p>  
-              <p class="card-text">An Iced Mocha made with Stumptown Cold Brew Original Coffee, chocolate syrup, and milk.</p>
-              <p class="card-text">$4.99</p>
-              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
+                        <!-- Unique option for burger1 - Classic American -->
+                        <div v-if="modalBurger.name == 'The Classic American'">
+                            
+                          <!-- Radio option for lettuce -->
+                          <p>
+                            <label for="lettuce">Lettuce:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.lettuce" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.lettuce" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+                          
+                          <!-- Radio option for pickles -->
+                          <p>
+                            <label for="pickles">Pickles:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.pickles" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.pickles" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+                          
+                          <!-- Radio option for tomatoes -->
+                          <p>
+                            <label for="tomatoes">Tomatoes:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.tomatoes" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.tomatoes" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+                          
+                          <!-- Radio option for sauce -->
+                          <p>
+                            <label for="sauce">Sauce:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.sauce" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.sauce" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
 
-<!--  Drink #3  Button       -->   
-            </div>
-          </div>
-<!--  Drink #4  Card       -->    
-          <div class="card p-3 my-5" style="width: 18rem;">
-            <img class="card-img-top" src="https://cdn.glitch.me/dea4e612-30de-4cea-b227-75f53191de9f%2Fd2.jpg?v=1637905049584?\" alt="Card image cap"> 
-            <div class="card-body">    
-              <p class="card-title2">Vanilla Shake</p>   
-              <p class="card-text">A classic Pure Vanilla shake made with Bassetts Ice Cream and milk. Topped with whipped cream and sprinkles.</p> 
-              <p class="card-text">$7.99</p> 
-              <button class="MenuAddbutton"><i class="fas fa-cart-plus"></i></button>
-<!--  Drink #4  Button       -->   
-            </div>
-          </div>     
-        </div>      
-      </div>    
-    </section> 
-  </main> 
+                        </div> 
+                        
+                          <!-- End of burger 1 - classic american options -->
+                        
+                         <!-- Unique option for burger 2 - House Burger -->
+                        <div v-if="modalBurger.name == 'The House Burger'">
+                            
+                          <!-- Radio option for lettuce -->
+                          <p>
+                            <label for="lettuce">Lettuce:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.lettuce" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.lettuce" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+                          
+                          <!-- Radio option for onions -->
+                          <p>
+                            <label for="onions">Onions:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.onions" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.onions" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+                          
+                          <!-- Radio option for bacon -->
+                          <p>
+                            <label for="bacon">Bacon:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.bacon" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.bacon" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+
+                        </div> 
+                        
+                          <!-- End of burger 2 - classic american options -->
+                        
+                         <!-- Unique option for burger 3 - Double Decker -->
+                        <div v-if="modalBurger.name == 'The Double Decker'">
+                            
+                         <!-- Radio option for pickles -->
+                          <p>
+                            <label for="pickles">Pickles:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.pickles" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.pickles" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+                          
+                          <!-- Radio option for tomatoes -->
+                          <p>
+                            <label for="tomatoes">Tomatoes:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.tomatoes" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.tomatoes" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+                          
+                          <!-- Radio option for onions -->
+                          <p>
+                            <label for="onions">Onions:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.onions" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.onions" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+                          
+                          <!-- Radio option for sauce -->
+                          <p>
+                            <label for="sauce">Sauce:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.sauce" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.sauce" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+
+                        </div> 
+                        
+                          <!-- End of burger 3 - double decker options -->
+                        
+                        <!-- Unique option for burger 4 - Triple Decker -->
+                        <div v-if="modalBurger.name == 'The Triple Decker'">
+                            
+                         <!-- Radio option for pickles -->
+                          <p>
+                            <label for="pickles">Pickles:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.pickles" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.pickles" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+                          
+                          <!-- Radio option for tomatoes -->
+                          <p>
+                            <label for="tomatoes">Tomatoes:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.tomatoes" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.tomatoes" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+                          
+                          <!-- Radio option for lettuce -->
+                          <p>
+                            <label for="lettuce">Lettuce:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.lettuce" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.lettuce" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+                          
+                          <!-- Radio option for avocado -->
+                          <p>
+                            <label for="avocado">Avocado:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="burger.options.avocado" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="burger.options.avocado" v-on:change="burgerValidation(burger, modalBurger)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+
+                        </div> 
+                        
+                          <!-- End of burger 4 - triple decker options -->
+
+                      </div> 
+                      <!-- End of modal body content; start of footer-->
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" v-on:click="resetItem(burger, modalBurger)">Close</button>
+                          <!-- Add to cart button is disabled if all customization options aren't selected (default)-->
+                          <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="must select all options before adding to cart">
+                            <button id="disabledCartButton" class="btn" type="button" disabled>Add to Cart</button>
+                          </span>
+
+                          <!-- Add to Cart Button only appears if user selects all options -->
+                          <button id="addBurgerModal" type="button" class="btn" data-bs-dismiss="modal" hidden v-on:click="addBurgerToCart(burger, modalBurger)">Add to Cart</button>
+                        </div>          
+                    </div>
+                  </div>
+                </div> <!-- End of modal -->
+              </div>
+            </div>  
+          </div>  <!-- End of row-->    
+        </div>   
+      </section> <!-- End of burgers -->   
+    
+      <!-- FRIES SECTION -->
+      <section class="shadow container p-5 my-5 bg-white rounded">  
+        <div class="shadow bg-white border rounded menu-subheader">
+          <h2 class="menu-item-heading" id="fries-section">Fries</b></h2> 
+          <p>FRESH, THICK-CUT, CRISPY, AND GOLDEN-BROWN POTATOES</p>
+        </div>
+        <div class="shadow bg-white border rounded">        
+          <div class="row container justify-content-center">
+            <!-- Fries loop -->
+            <div v-for="(fry, index) in fries" :key="index" class="col-sm g-0">
+              <div class="card p-3 my-5" style="width: 18rem;"> 
+                <img class="card-img-top" v-bind:src="fry.image" alt="Card image cap"> 
+                <div class="card-body">    
+                  <p class="card-title2">{{ fry.name }}</p>   
+                  <p class="card-text">{{ fry.description }}</p>  
+                  <p class="card-text">{{ fry.price }}</p>   
+                  <!-- Add to cart button -->
+                  <button class="MenuAddbutton" data-bs-toggle="modal" data-bs-target="#fryModal" v-on:click="setModalFry(fry)"><i class="fas fa-cart-plus"></i></button>
+                </div> <!-- End of card body -->
+                
+                <!-- Start of Modal content -->
+                
+                <div class="modal fade" id="fryModal" tabindex="-1" aria-labelledby="fryModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="fryModalLabel">{{ modalFry.name }}</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" v-on:click="resetItem(fry, modalFry)"></button>
+                      </div>
+                      <div class="modal-body">
+                        <!-- Start of Modal body content -->
+                            
+                        <!-- Radio option for size -->
+                        <p>
+                          <label for="size">Size:</label><br>
+                          <input class="form-check-input" type="radio" id="small" value="small" v-model="fry.options.size" v-on:change="fryValidation(fry, modalFry)">
+                          <label class="form-check-label" for="small">Small</label>
+                          <br>
+                          <input class="form-check-input" type="radio" id="medium" value="medium" v-model="fry.options.size" v-on:change="fryValidation(fry, modalFry)">
+                          <label class="form-check-label" for="medium">Medium</label>
+                          <br>
+                          <input class="form-check-input" type="radio" id="large" value="large" v-model="fry.options.size" v-on:change="fryValidation(fry, modalFry)">
+                          <label class="form-check-label" for="large">Large</label>
+                        </p>
+                        
+                        <!-- Unique option for garlic fries -->
+                        <div v-if="modalFry.name == 'Garlic Fries'">
+                          <!-- Radio option for size -->
+                          <p>
+                            <label for="cheese">Cheese:</label><br>
+                            <input class="form-check-input" type="radio" id="keep" value="keep" v-model="fry.options.cheese" v-on:change="fryValidation(fry, modalFry)">
+                            <label class="form-check-label" for="keeep">Keep</label>
+                            <br>
+                            <input class="form-check-input" type="radio" id="remove" value="remove" v-model="fry.options.cheese" v-on:change="fryValidation(fry, modalFry)">
+                            <label class="form-check-label" for="remove">Remove</label>
+                          </p>
+                        </div>
+                        <!-- End of fry options -->
+
+                      </div> 
+                      <!-- End of modal body content; start of footer-->
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" v-on:click="resetItem(fry, modalFry)">Close</button>
+                          <!-- Add to cart button is disabled if all customization options aren't selected (default)-->
+                          <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="must select all options before adding to cart">
+                            <button id="disabledFryCartButton" class="btn" type="button" disabled>Add to Cart</button>
+                          </span>
+
+                          <!-- Add to Cart Button only appears if user selects all options -->
+                          <button id="addFryModal" type="button" class="btn" data-bs-dismiss="modal" hidden v-on:click="addFryToCart(fry, modalFry)">Add to Cart</button>
+                        </div>          
+                    </div>
+                  </div>
+                </div> <!-- End of modal -->
+              </div>
+            </div>  
+          </div>  <!-- End of row-->    
+        </div>   
+      </section>
+
+      <!-- DRINKS SECTION -->
+      <section class="shadow container p-5 my-5 bg-white rounded">    
+        <div class="shadow bg-white border rounded menu-subheader">
+          <h2 class="menu-item-heading" id="drinks-section">Drinks</h2> 
+          <p>HANDCRAFTED AND MADE-TO-ORDER</p>
+        </div>
+        <div class="shadow bg-white border rounded">  
+          <div class="row container justify-content-center">
+            <!-- Drinks loop -->
+            <div v-for="(drink, index) in drinks" :key="index" class="col-sm g-0">
+              <div class="card p-3 my-5" style="width: 18rem;"> 
+                <img class="card-img-top" v-bind:src="drink.image" alt="Card image cap"> 
+                <div class="card-body">    
+                  <p class="card-title2">{{ drink.name }}</p>   
+                  <p class="card-text">{{ drink.description }}</p>  
+                  <p class="card-text">{{ drink.price }}</p>   
+                  <!-- Add to cart button -->
+                  <button class="MenuAddbutton" data-bs-toggle="modal" data-bs-target="#drinkModal" v-on:click="setModalDrink(drink)"><i class="fas fa-cart-plus"></i></button>
+                </div> <!-- End of card body -->
+                
+                <!-- Start of Modal content -->
+                
+                <div class="modal fade" id="drinkModal" tabindex="-1" aria-labelledby="drinkModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="drinkModalLabel">{{ modalDrink.name }}</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" v-on:click="resetItem(drink, modalDrink)"></button>
+                      </div>
+                      <div class="modal-body">
+                        <!-- Start of Modal body content -->
+                            
+                        <!-- Radio option for size -->
+                        <p>
+                          <label for="size">Size:</label><br>
+                          <input class="form-check-input" type="radio" id="small" value="small" v-model="drink.options.size" v-on:change="drinkValidation(drink, modalDrink)">
+                          <label class="form-check-label" for="small">Small</label>
+                          <br>
+                          <input class="form-check-input" type="radio" id="medium" value="medium" v-model="drink.options.size" v-on:change="drinkValidation(drink, modalDrink)">
+                          <label class="form-check-label" for="medium">Medium</label>
+                          <br>
+                          <input class="form-check-input" type="radio" id="large" value="large" v-model="drink.options.size" v-on:change="drinkValidation(drink, modalDrink)">
+                          <label class="form-check-label" for="large">Large</label>
+                        </p>
+
+                      </div> 
+                      <!-- End of modal body content; start of footer-->
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" v-on:click="resetItem(drink, modalDrink)">Close</button>
+                          <!-- Add to cart button is disabled if all customization options aren't selected (default)-->
+                          <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="must select all options before adding to cart">
+                            <button id="disabledDrinkCartButton" class="btn" type="button" disabled>Add to Cart</button>
+                          </span>
+
+                          <!-- Add to Cart Button only appears if user selects all options -->
+                          <button id="addDrinkModal" type="button" class="btn" data-bs-dismiss="modal" hidden v-on:click="addDrinkToCart(drink, modalDrink)">Add to Cart</button>
+                        </div>          
+                    </div>
+                  </div>
+                </div> <!-- End of modal -->
+              </div>
+            </div>    
+          </div>      
+        </div>    
+      </section> 
+    </main> 
+  </div> <!-- End of Vue/App -->
   
   <footer>
     <div class="footer-row1">
@@ -253,8 +477,19 @@
       <p>Site Design by TheTeam</p>
     </div>
   </footer>
-  
- 
+
+  <!-- JS Script -->
+  <script src="./orderCheckout.js"></script> 
+
+  <!-- Found on Stack Overflow to get tooltip (fancy text popup on hover) to display; required JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+  <script>
+  $(document).ready(function(){      
+    $('[data-bs-toggle="tooltip"]').tooltip();   
+  });
+  </script>
+
 </body>
 </html>
 
