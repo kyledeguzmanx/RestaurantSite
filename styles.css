@@ -296,3 +296,126 @@ footer{
   padding-top: 10px;
   line-height: 2.7;
 }
+th {
+  text-align: right; 
+}
+.map-container {   
+  height:700px;   
+  width: 700px;  
+  margin: auto;   
+  position: fixed;  
+  right: -10px;   
+  alignment: right; 
+  border: 1px solid blue;   
+  background-color: #FFC0CB;
+}
+#map{ 
+  height: 100%;
+}
+
+/* MODALS */
+
+.modal-header {
+  background: var(--customRed)
+}
+
+.modal-title {
+  color: var(--customYellow)
+}
+
+#disabledCartButton, #addBurgerModal, #disabledFryCartButton, #addFryModal, #disabledDrinkCartButton, #addDrinkModal {
+  background: var(--customRed);
+  color: #ffffff;
+}
+
+/* CHECKOUT */
+.checkout-test img {
+  height: 11vw;
+}
+
+.checkout-test li {
+  margin-bottom: 10px;
+}
+
+.checkout-test .card-title {
+  font-family: 'Staatliches', cursive;
+  color: var(--customRed);
+}
+
+.checkout-test .checkout-price {
+  font-family: 'Staatliches', cursive;
+  font-size: 1.2rem;
+}
+
+#checkout-options-list-height {
+  height: 75px;
+  overflow: auto;
+}
+
+.btn-checkout {
+  background: var(--customRed);
+  font-family: 'Staatliches', cursive;
+  color: white !important;
+  font-size: 1.2rem !important;
+}
+
+.btn-checkout:hover {
+  background-color:yellow;
+  color: var(--customRed) !important;
+  transition: background-color 250ms linear;
+}
+
+/* Order Success Page */
+
+.success-message ul {
+  font-size: 1.5rem;
+  color: white !important;
+}
+
+.success-message {
+  padding: 30px;
+  background: var(--customRed);
+}
+
+
+
+/*GALLERY*/
+
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20vh 10vw;
+}
+
+/* Create four equal columns that sits next to each other */
+.gallery-column {
+  flex: 25%;
+  max-width: 33.3%;
+  padding: 0 4px;
+}
+
+.gallery-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+ 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .gallery-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .gallery-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+.gallery-column img:hover{
+  transform: scale(1.2);
+  transition: transform 350ms linear;
+}
