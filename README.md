@@ -31,5 +31,9 @@ VueJS
 
 ## Credits
 Color Palette Provided by [Coolors](https://coolors.co/)  
-Google Maps Embed   
-Dropdown Menu by Boostrap Docs
+Dropdown Menu by Boostrap Docs  
+Google Maps 
+Photo Carousell By Bootstrap Docs
+Unsplash Photos for Menu Photos and Gallery Photos
+
+
