@@ -3,10 +3,16 @@ A mock-site for a burger chain called CSUN Grill. It includes an image carousel,
 
 ## Technology  
 Bootstrap  
+Canva  
 CSS  
-Javascript  
-HTML  
+EmailJS  
 Grid + Flexbox  
+HTML  
+Javascript    
+Adobe Photoshop 2022
+VueJS  
+
+
 
 ## Screenshots  
 ![Screenshot](https://github.com/kyledeguzmanx/RestaurantSite/blob/master/images/home1.png)  
