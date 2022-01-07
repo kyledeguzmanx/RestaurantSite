@@ -1,6 +1,8 @@
 # CSUN BURGER
 A mock-site for a burger chain called CSUN Grill. It includes an image carousel, navigation bar, navigation bar w/ dropdown, and CSS transitions
 
+Live site: https://kyledeguzmanx.github.io/RestaurantSite/Accessibility.html
+
 ## Technology
 Adobe Photoshop 2022  
 Bootstrap  
