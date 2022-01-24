@@ -698,8 +698,8 @@ var app = new Vue ({
         stripe.redirectToCheckout({
         lineItems: this.stripeCart,
         mode: 'payment',
-        successUrl: 'https://comp484-final-group-project1.glitch.me/orderSuccess.html',
-        cancelUrl: 'https://comp484-final-group-project1.glitch.me/CheckoutPage.html',
+        successUrl: 'orderSuccess.html',
+        cancelUrl: 'CheckoutPage.html',
       }).then(function (result) {
         // If `redirectToCheckout` fails due to a browser or network
         // error, display the localized error message to your customer
